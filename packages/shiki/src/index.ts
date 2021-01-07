@@ -5,10 +5,4 @@ export { getHighlighter } from './highlighter'
 export { renderToHtml } from './renderer'
 export { IThemedToken } from './themedTokenizer'
 export { setCDN, setOnigasmWASM, fetchTheme as loadTheme } from './loader'
-export {
-  ILanguageRegistration,
-  IShikiTheme,
-  IThemeRegistration,
-  Highlighter,
-  HighlighterOptions
-} from './types'
+export * from './types'

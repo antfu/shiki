@@ -14,6 +14,7 @@ import { getOnigasm } from './loader'
 import { Lang, languages as BUNDLED_LANGUAGES } from './languages'
 import { Registry } from './registry'
 import { Theme } from './themes'
+import { defaultLangs } from './defaults'
 
 function resolveLang(lang: ILanguageRegistration | Lang) {
   return typeof lang === 'string'
@@ -22,7 +23,7 @@ function resolveLang(lang: ILanguageRegistration | Lang) {
 }
 
 function resolveOptions(options: HighlighterOptions) {
-  let _languages: ILanguageRegistration[] = BUNDLED_LANGUAGES
+  let _languages: ILanguageRegistration[] = defaultLangs
   let _themes: IThemeRegistration[] = options.themes || []
 
   if (options.langs?.length) {
